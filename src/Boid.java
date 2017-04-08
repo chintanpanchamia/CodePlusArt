@@ -2,7 +2,7 @@ import processing.core.*;
 
 import java.util.*;
 public class Boid{
-	PVector position;
+	  PVector position;
 	  PVector velocity;
 	  PVector acceleration;
 	  float r;
@@ -11,7 +11,7 @@ public class Boid{
 	  
 	  PApplet pr;
 	  Boid(float x, float y, PApplet parent) {
-		  pr = parent;
+		pr = parent;
 	    acceleration = new PVector(0,0);
 	    velocity = new PVector(pr.random(-1,1),pr.random(-1,1));
 	    position = new PVector(x,y);
