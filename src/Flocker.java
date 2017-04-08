@@ -18,7 +18,7 @@ public class Flocker extends PApplet {
 
 	public void settings() 
 	{
-		size(1000, 800);
+		size(2000, 1600);
 	}
 	
 	public void setup() {
@@ -34,36 +34,38 @@ public class Flocker extends PApplet {
 	public void draw() 
 	{
 	  background(255);
-	  int fontSize = 80;
+	  int fontSize = 96;
+	  
+	  PFont myFont = createFont("JosefinSans-Regular.ttf", fontSize);
+	  textFont(myFont);
+	  textSize(fontSize);
 	  
 	  DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 	  Date date = new Date();
 	  String d = dateFormat.format(date);
 	  
-	  PVector pos = new PVector(width/2,height/2);
-	  // Instructions
 	  fill(0);
-	  //textSize(64);
-	  float textWid = textWidth(d);
-
-	  //lower y position including descent of text
-	  float lower = pos.y + textDescent();
-	  //upper calculated from lowewr point
-	  float upper = lower - fontSize;
-	  //textAlign(CENTER, CENTER);
-	 
-	  PFont myFont = createFont("JosefinSans-Regular.ttf", fontSize);
-	  textFont(myFont);
-	  text(d,width/2,height/2);
-	  
 	  stroke(150);
-	  line(pos.x, lower, pos.x + textWid, lower);
 	  
-	  line(pos.x, upper, pos.x + textWid, upper );
+	  PVector pos = new PVector(width/2,height/2);
+	  float textWid = textWidth(d);
+	  float lower = pos.y + textDescent();		//lower y position including descent of text
+	  float upper = lower - fontSize;			//upper calculated from lower point
+	  float maxTextWid = 550 * fontSize / 64;
+
+	  //textAlign(CENTER, CENTER);
+	  //text(d,pos.x-textWid/2,pos.y+textDescent());
+	  text(d, pos.x-maxTextWid/2, pos.y+textDescent());
 	  
-	  line(pos.x, upper, pos.x, lower );
+	  //System.out.format("%s, %s, %s, %s, %s", width/2, height/2, textWid, upper, lower);
+	  //System.out.println();
+	  /*line(pos.x-maxTextWid/2, lower, pos.x + maxTextWid/2, lower);
+	  line(pos.x-maxTextWid/2, upper, pos.x + maxTextWid/2, upper);
+	  line(pos.x - maxTextWid/2, upper, pos.x - maxTextWid/2, lower );
+	  line(pos.x + maxTextWid/2 , upper, pos.x + maxTextWid/2, lower );*/
 	  
-	  line(pos.x + textWid, upper, pos.x + textWid, lower );
+	  fill(255,0,0);
+	  ellipse(width/2, height/2,10,10);
 	  
 	  flock.run();
 	}
