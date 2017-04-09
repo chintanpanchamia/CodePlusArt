@@ -10,14 +10,16 @@ public class Boid{
 	  float maxspeed;    // Maximum speed
 	  
 	  PApplet pr;
+	  
 	  Boid(float x, float y, PApplet parent) {
 		pr = parent;
 	    acceleration = new PVector(0,0);
 	    velocity = new PVector(pr.random(-1,1),pr.random(-1,1));
 	    position = new PVector(x,y);
-	    r = 3.0f;
+	    r = 8.0f;
 	    maxspeed = 1f;
-	    maxforce = 0.05f;
+	    maxforce = 0.01f;
+	   
 	  }
 
 	  void run(ArrayList<Boid> boids) {
@@ -38,7 +40,7 @@ public class Boid{
 	    PVector ali = align(boids);      // Alignment
 	    PVector coh = cohesion(boids);   // Cohesion
 	    // Arbitrarily weight these forces
-	    sep.mult(1.5f);
+	    sep.mult(3.5f);
 	    ali.mult(1.0f);
 	    coh.mult(1.0f);
 	    // Add the force vectors to acceleration
@@ -74,18 +76,62 @@ public class Boid{
 	  void render() {
 	    // Draw a triangle rotated in the direction of velocity
 	    float theta = velocity.heading2D() + pr.radians(90);
-	    pr.fill(175);
+	    pr.fill(255,0,0);
 	    pr.stroke(0);
 	    pr.pushMatrix();
 	    pr.translate(position.x,position.y);
 	    pr.rotate(theta);
-	    pr.beginShape(pr.TRIANGLES);
-	    pr.vertex(0, -r*2);
-	    pr.vertex(-r, r*2);
-	    pr.vertex(r, r*2);
+
+	    int r = 10;
+	    
+	    
+	    pr.beginShape();
+	    pr.fill(255, 0, 0);
+	    pr.strokeWeight(r/25);
+	    
+	    //vertex(-r, -3*r/2); //1
+	    pr.vertex(-0.8f*r,-3*r/2 + r/6); //1.5
+	    pr.vertex(-r/3, -r);  //2
+	    pr.vertex(r/3, -r);  //3
+	    pr.vertex(0.8f*r,-3*r/2 + r/6); //3.5
+	    //vertex(r, -3*r/2);  //4
+	    pr.vertex(0.9f*r, -3*r/2 + r/3);  //4.5
+	    pr.vertex(0.8f*r,-r/2);  //5
+	    pr.vertex(r, r/3);  //6
+	    pr.vertex(r/3, 2*r/3);  //7
+	    pr.vertex(0, r);  //8
+	    pr.vertex(-r/3, 2*r/3);  //9
+	    pr.vertex(-r, r/3);  //10
+	    pr.vertex(-0.8f*r, -r/2);  //11
+	    pr.vertex(-0.9f*r, -3*r/2 + r/3);  //11.5
+	    //vertex(-r, -3*r/2); //1
+	    pr.vertex(-0.8f*r,-3*r/2 + r/6); //1.5
 	    pr.endShape();
+	    pr.fill(0);
+	    polygon(0, r/2.5f, 0.18f*r, 6); //nose
+	    pr.fill(255);
+	    pr.strokeWeight(r/16);
+	    pr.line(-0.8f*r, -r/2,-r/3, -r/3);
+	    pr.line(0.8f*r,-r/2,r/3, -r/3);
+	    
+	    pr.strokeWeight(r/50);
+	    pr.line(-r/3, -r/3, -0.18f*r, r/2.5f);
+	    pr.line(r/3, -r/3, 0.18f*r, r/2.5f);
 	    pr.popMatrix();
+		    
 	  }
+	  
+	  void polygon(float x, float y, float radius, int npoints) 
+	  {
+		  float angle = pr.TWO_PI / npoints;
+		  pr.beginShape();
+		  for (float a = 0; a < pr.TWO_PI; a += angle) {
+		    float sx = x + pr.cos(a) * radius;
+		    float sy = y + pr.sin(a) * radius;
+		    pr.vertex(sx, sy);
+		  }
+		  pr.endShape(pr.CLOSE);
+		}
 
 	  // Wraparound
 	  void borders() {

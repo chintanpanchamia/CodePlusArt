@@ -20,7 +20,8 @@ public class Flocker extends PApplet {
 
 	public void settings() 
 	{
-		size(2000, 1600);
+		//size(2000, 1600);
+		size(1000, 800);
 	}
 	
 	public void setup() {
@@ -83,8 +84,10 @@ public class Flocker extends PApplet {
 	  line(pos.x - maxTextWid/2, upper, pos.x - maxTextWid/2, lower );
 	  line(pos.x + maxTextWid/2 , upper, pos.x + maxTextWid/2, lower );*/
 	  
+
 	  // fill(255,0,0);
 	  // ellipse(width/2, height/2,10,10);
+
 	  
 	  flock.run();
 	}
