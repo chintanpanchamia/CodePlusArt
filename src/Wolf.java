@@ -21,6 +21,7 @@ public class Wolf
 		
 		// Based on type
 		acceleration = new PVector(0,0);
+
 		velocity = new PVector(0,0);
 		position = new PVector(x,y);
 		r = 20;

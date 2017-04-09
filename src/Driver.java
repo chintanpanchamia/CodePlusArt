@@ -2,6 +2,7 @@ import processing.core.*;
 public class Driver extends PApplet 
 {
 	Wolf wanderer;
+	WolfPack myPack;
 	boolean debug = true;
 	
 	public static void main(String args[])
@@ -16,14 +17,20 @@ public class Driver extends PApplet
 	
 	public void setup() 
 	{
-	  wanderer = new Wolf(width/2, height/2, this);
+	  //wanderer = new Wolf(width/2, height/2, this);
+	  myPack = new WolfPack();
 	}
 
-	public void draw() {
+	public void draw() 
+	{
 	  background(255);
-	  if(frameCount % 5 == 0)
+	  
+	  if(frameCount % 3 == 0)
 		  wanderer.wander();
 	  wanderer.run();
+	  
+	  //CODE FOR CLOCK
+	  
 	}
 
 	public void mousePressed() {
