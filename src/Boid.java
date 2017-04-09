@@ -1,7 +1,8 @@
 import processing.core.*;
 
 import java.util.*;
-public class Boid{
+public class Boid
+{
 	  PVector position;
 	  PVector velocity;
 	  PVector acceleration;
@@ -73,7 +74,8 @@ public class Boid{
 	    return steer;
 	  }
 	  
-	  void render() {
+	  void render() 
+	  {
 	    // Draw a triangle rotated in the direction of velocity
 	    float theta = velocity.heading2D() + pr.radians(90);
 	    pr.fill(255,0,0);

@@ -37,7 +37,8 @@ public class Flocker extends PApplet {
 	public void draw() 
 	{
 	  background(255);
-	  int fontSize = 96;
+	  flock.run();
+	  int fontSize = 64;
 	  
 	  PFont myFont = createFont("JosefinSans-Regular.ttf", fontSize);
 	  textFont(myFont);
@@ -89,7 +90,7 @@ public class Flocker extends PApplet {
 	  // ellipse(width/2, height/2,10,10);
 
 	  
-	  flock.run();
+	  
 	}
 
 	// Add a new boid into the System
