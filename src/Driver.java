@@ -11,6 +11,7 @@ public class Driver extends PApplet
 	Wolf wanderer;
 	WolfPack myPack;
 	boolean debug = true;
+	float ratio = 0f;
 
 	public static void main(String args[])
 	{
@@ -19,14 +20,20 @@ public class Driver extends PApplet
 
 	public void settings()
 	{
-		size(5760/2, 2304/2);
+		//size(5760/4, 2304/4);
 		//size(2880, 2440);
+		//size(1920,1080);
+		
+		//size(displayWidth, displayHeight);
+		fullScreen();
 	}
 
 	public void setup() 
 	{
 		myPack = new WolfPack(this);
+		ratio = 256/(5760/width);
 	}
+	
 
 	public void draw() 
 	{
@@ -39,7 +46,7 @@ public class Driver extends PApplet
 	{
 		//textMode(SHAPE);
 		//int fontSize = width * height / 51840;
-		int fontSize = 128;
+		int fontSize = (int)(ratio);//128;
 		
 		PFont myFont = createFont("JosefinSans-Regular.ttf", fontSize);
 		textFont(myFont);
@@ -85,7 +92,7 @@ public class Driver extends PApplet
 		
 		myFont = createFont("JosefinSans-BoldItalic.ttf", fontSize);
 		textFont(myFont);
-		String displayMessage1 = "#BecomeTheAlpha";
+		String displayMessage1 = "#ThinkAndDo";//"#BecomeTheAlpha";
 		text(displayMessage1, pos.x - maxTextWid/2 + textWidth(displayDate)/2.5f,
 				pos.y + fontSize*1.5f + textDescent());
 		

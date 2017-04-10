@@ -37,7 +37,7 @@ public class Wolf
 		acceleration = new PVector(0,0);
 
 		velocity = new PVector(0,0);
-		r = pr.width * pr.height / 150680;
+		r = 0.007f*pr.width; //* pr.height / 150680;
 		maxspeed = r/10;
 
 		wandertheta = 0;
