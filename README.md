@@ -20,6 +20,9 @@ It was decided that we would work on a clock visualization. After deciding this,
 - Old/Aged
 - Omega
 
+Here's the original template sheet,
+![wolfbase](https://cloud.githubusercontent.com/assets/13035693/24915642/b4ae5e50-1ea5-11e7-9ec8-cc101940924e.png)
+
 However, after running into problems with optimization for rendering both SVGs and PNGs, we decided to make good use of the minimalistic aesthetic in our project. It was done by simplifying the wolves' designs, whilst retaining the color code.
 
 After thinking about taking this to the next level, we thought of mimicking an actual WolfPack, and using an AI program to do this. It would be a simple modification of the Flocking AI behavior - an algorithm put forth by Craig Reynolds. We used Daniel Shiffman's works in Processing as reference to implement this, with modifications of our own.
