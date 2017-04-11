@@ -96,7 +96,7 @@ public class Driver extends PApplet
 		text(displayMessage1, pos.x - maxTextWid/2 + textWidth(displayDate)/2.5f,
 				pos.y + fontSize*1.5f + textDescent());
 		
-		myFont = createFont("JosefinSans-Italic.ttf", fontSize);
+		//myFont = createFont("JosefinSans-BoldItalic.ttf", fontSize);
 		textFont(myFont);
 		String displayMessage2 = "#GoWolfPack";
 		text(displayMessage2, pos.x + maxDateWid/2 - textWidth(displayMessage2)/1.8f,
