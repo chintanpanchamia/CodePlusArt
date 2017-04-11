@@ -1,7 +1,6 @@
 # [Code+Art](https://www.lib.ncsu.edu/codeart) Project : WolfClock
 
 Authors: Chintan Panchamia, Aditya Shirode
-Last Updated: 4/8/2017
 
 ### Description
 WolfClock was created for Code+Art competition organized by NC State Libraries.
