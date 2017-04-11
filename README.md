@@ -28,7 +28,7 @@ The NC State Campus, and the way its inhabitants move about was part of the insp
 While this is now peculiarly different than how wolves operate in nature, it is strangely characteristic of how we humans function, and since we, at NC State are our own Wolves, we couldn't help but see the similarity.
 
 ### Creators
-Chintan Panchamia [cpancha]@ncsu.edu
+**Chintan Panchamia** _cpancha_@ncsu.edu
 I'm a graduate student at NC State University, about to graduate in May 2017, with a Master's Degree in Computer Science. My hobbies include designing, coding, writing, some reading, sketching, and running.
 You can find me here, on [Linkedin][1], [Twitter][2] and [Facebook][3]
 
@@ -36,7 +36,7 @@ You can find me here, on [Linkedin][1], [Twitter][2] and [Facebook][3]
 [2]: http://www.twitter.com/chinpanchamia
 [3]: http://www.facebook.com/chintan.panchamia
 
-Aditya Shirode [avshirod]@ncsu.edu
+**Aditya Shirode** _avshirod_@ncsu.edu
 I'm a graduate student at NC State University, graduating at the same time, with a Master's Degree in Computer Science. My hobbies include reading, football, coding, and playing racquetball.
 You can find me here, on [Linkedin][4], [Twitter][5] and [Facebook][6]
 
