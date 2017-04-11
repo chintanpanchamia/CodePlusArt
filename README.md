@@ -7,6 +7,7 @@ WolfClock was created for Code+Art competition organized by NC State Libraries.
 The idea originated on creating a good submission for the competition, over one weekend.
 Displaying current date and time on a big screen, might not be innovative, but is essential and helpful in an almost invisible way. We tried to bring some WolfPack spririt into the visualization with pack/s of wolves wandering in the background.
 The pack/s have different types of wolves, and they follow the Alpha, like they do in a real pack.
+**Refer Note at bottom to get the submission executable**
 
 ### Motivation
 The main inspiration was the need to create something simple and beautiful for the competition. Going by previous submissions and the kind of characteristics they exhibited, we had to make something that would scale well onto these large displays mounted across the Libraries on campus. We thought of common/popular data visualizations that are in use out there. These included scripts like Sentiment analyzers, Weather profilers, Word-map generators, mathematical patterns, etc.
@@ -42,3 +43,6 @@ You can find me here, on [Linkedin][4], [Twitter][5] and [Facebook][6]
 [4]: http://www.linkedin.com/in/adityavshirode
 [5]: http://www.twitter.com/Anthaceorote
 [6]: https://www.facebook.com/anthaceorote
+
+
+**NOTE: Submission:Executable.zip contains the .exe file as requested for the submission. Download the Zip and directly run the executable.**
