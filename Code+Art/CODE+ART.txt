@@ -1,0 +1,20 @@
+Males, Females
+
+Dimensions: 
+Male : 557 * 647
+Female: 507 * 627
+
+1. Alpha
+
+2, 3, 4. Beta
+
+5, 6, 7. Pups
+8, 9, 10. Oldies
+
+11, 12, 13. Omega
+
+
+
+Stage 1 - Flocking basic, Time
+Stage 2 - color coding
+Stage 3 - Behaviors
